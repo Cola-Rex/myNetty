@@ -16,7 +16,8 @@ import rpc.entity.ClassInfo;
  * 将执行结果发送给客户端。
  */
 public class InvokerHandler extends ChannelInboundHandlerAdapter {
-
+	
+	//记录反射获得的类，提高性能
 	public static ConcurrentHashMap<String, Object> classMap = new ConcurrentHashMap<>();
 	
 	@Override
@@ -24,7 +25,7 @@ public class InvokerHandler extends ChannelInboundHandlerAdapter {
 		ClassInfo classInfo = (ClassInfo) msg;
 		Object clazz = null;
 		
-		if (classMap.containsKey(classInfo.getClassName())) {
+		if (!classMap.containsKey(classInfo.getClassName())) {
 			try {
 				clazz = Class.forName(classInfo.getClassName()).newInstance();
 				classMap.put(classInfo.getClassName(), clazz);
