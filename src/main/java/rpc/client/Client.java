@@ -18,7 +18,7 @@ import io.netty.handler.codec.LengthFieldPrepender;
 import io.netty.handler.codec.serialization.ClassResolvers;
 import io.netty.handler.codec.serialization.ObjectDecoder;
 import io.netty.handler.codec.serialization.ObjectEncoder;
-import rpc.util.ClassInfo;
+import rpc.entity.ClassInfo;
 
 public class Client {
 

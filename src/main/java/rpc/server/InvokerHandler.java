@@ -5,7 +5,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
-import rpc.util.ClassInfo;
+import rpc.entity.ClassInfo;
 
 /**
  * 服务端操作，

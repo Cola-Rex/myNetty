@@ -1,4 +1,4 @@
-package rpc.util;
+package rpc.entity;
 
 import java.io.Serializable;
 
